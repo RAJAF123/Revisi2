@@ -4,9 +4,15 @@
     <string name="btn_login">Login</string>
     <string name="ed_nama">Masukkan Nama</string>
     <string name="ed_alamat">Masukkan Alamat</string>
+    <string name="ed_jkel">Masukkan jkel</string>
     <string name="ed_no_hp">Masukkan No Hp</string>
     <string name="btn_logout">Keluar</string>
     <string name="btn_simpan">Simpan</string>
     <string name="btn_sh_data">Lihat Data</string>
     <string name="btn_update">Update</string>
+    <string name="selected_item">Selected</string>
+    <string-array name="JenisKelamin">
+        <item>memasak</item>
+        <item>menyanyi</item>
+    </string-array>
 </resources>

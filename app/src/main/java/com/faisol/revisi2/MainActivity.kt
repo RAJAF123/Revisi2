@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.tasks.OnCompleteListener
@@ -28,7 +29,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_show_data.setOnClickListener(this)
 
         auth = FirebaseAuth.getInstance()
+        setDataSpinnerJK()
 
+    }
+    private fun setDataSpinnerJK(){
+        val adapter =ArrayAdapter.createFromResource(this,
+        R.array.JenisKelamin, android.R.layout.simple_spinner_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerJK.adapter=adapter
     }
 
     private fun isEmpty(s: String): Boolean {
@@ -44,6 +52,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val getNama: String = nama.getText().toString()
                 val getAlamat: String = alamat.getText().toString()
                 val getNoHp: String = no_hp.getText().toString()
+                val jkel:String=spinnerJK.selectedItem.toString()
 
                 val getReference: DatabaseReference
                 getReference = database.reference
@@ -53,7 +62,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         Toast.LENGTH_SHORT).show()
                 } else {
                     getReference.child("Admin").child(getUserID).child("DataTeman").push()
-                        .setValue(data_teman(getNama, getAlamat, getNoHp))
+                        .setValue(data_teman(getNama, getAlamat, getNoHp,jkel))
                         .addOnCompleteListener(this) {
                             nama.setText("")
                             alamat.setText("")

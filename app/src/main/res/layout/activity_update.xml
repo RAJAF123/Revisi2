@@ -41,6 +41,23 @@
             android:inputType="number"
             android:lines="1"
             android:autofillHints="Your Phone here..."/>
+        <EditText
+            android:id="@+id/jkel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ed_jkel"
+            android:inputType="text"
+            android:lines="1"
+            android:autofillHints="Your Phone here..."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobby"
+            android:textSize="12sp"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerJK"/>
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -18,7 +18,7 @@
         android:layout_width="220dp"
         android:layout_height="343dp"
         android:contentDescription="@string/iv_andriyot"
-        android:src="@drawable/bobby"
+        android:src="@drawable/pelangi"
         android:layout_centerInParent="true"/>
 
     <Button

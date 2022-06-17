@@ -5,6 +5,7 @@ class data_teman {
     var alamat: String? = null
     var no_hp: String? = null
     var key: String? = null
+    var jkel:String?=null
 
     constructor(){}
 
@@ -12,5 +13,8 @@ class data_teman {
         this.nama = nama
         this.alamat = alamat
         this.no_hp = no_hp
+        this.jkel=jkel
     }
+
+    constructor(nama: String, alamat: String, noHp: String, jkel: String)
 }
